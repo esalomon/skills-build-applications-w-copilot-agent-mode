@@ -31,7 +31,7 @@ function Activities() {
       <ul>
         {activities.map((activity) => (
           <li key={activity.id || activity._id}>
-            {activity.name || activity.type} — {activity.duration} min
+            {activity.type} — {activity.durationMinutes} min
           </li>
         ))}
       </ul>
