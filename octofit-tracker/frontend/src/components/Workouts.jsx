@@ -10,7 +10,10 @@ function Workouts() {
       : 'http://localhost:8000/api/workouts/';
 
     fetch(endpoint)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`Request failed with status ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
         const list = Array.isArray(data)
           ? data
