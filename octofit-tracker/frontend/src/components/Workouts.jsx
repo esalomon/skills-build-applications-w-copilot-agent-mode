@@ -31,7 +31,7 @@ function Workouts() {
       <ul>
         {workouts.map((workout) => (
           <li key={workout.id || workout._id}>
-            {workout.name} — {workout.duration} min
+            {workout.title} — {workout.durationMinutes} min
           </li>
         ))}
       </ul>
