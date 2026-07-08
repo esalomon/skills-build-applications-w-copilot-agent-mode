@@ -31,7 +31,7 @@ function Leaderboard() {
       <ol>
         {leaders.map((entry) => (
           <li key={entry.id || entry._id}>
-            {entry.username || entry.name} — {entry.points ?? entry.score} pts
+            {entry.user?.name ?? entry.user?.email ?? 'Unknown user'} — {entry.points ?? entry.score} pts
           </li>
         ))}
       </ol>
